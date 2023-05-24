@@ -27,6 +27,8 @@ USER = login['user']
 PASS = login['password']
 URL = login['url']
 CHROME_DRIVER = login['chrome_driver']
+TICKET_ID_BEGIN = int(login['ticket_id_begin'])
+TICKET_ID_END = int(login['ticket_id_end'])
 
 ## Web Driver
 # browser = webdriver.Chrome(CHROME_DRIVER)
@@ -61,9 +63,10 @@ BASE_URL='https://gate.tok.access-company.com/redmine/projects/acs-knowledgebase
 # load articles and write down them to a csv file
 with open('./knowledge_db.csv', 'w', encoding='utf-8') as f:
     writer = csv.writer(f)
-    #writer.writerow(['page_content', 'source'])
+    # title line
     writer.writerow(['subject', 'description', 'source'])
-    for i in range(168, 300, 1):
+    # articles
+    for i in range(TICKET_ID_BEGIN, TICKET_ID_END, 1):
         # URL of knowledge-db articles
         url = BASE_URL + str(i)
         logging.info(url)

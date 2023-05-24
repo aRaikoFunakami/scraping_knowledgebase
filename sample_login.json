@@ -2,5 +2,7 @@
     "password": "<password>",
     "user": "<user id>",
     "url":  "<url for scraping>",
-    "chrome_driver": "<chrome driver>"
+    "chrome_driver": "<chrome driver>",
+    "ticket_id_begin": "1",
+    "ticket_id_end": "100"
 }
