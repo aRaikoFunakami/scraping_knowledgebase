@@ -1,0 +1,6 @@
+{
+    "password": "<password>",
+    "user": "<user id>",
+    "url":  "<url for scraping>",
+    "chrome_driver": "<chrome driver>"
+}
