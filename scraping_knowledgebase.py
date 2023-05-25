@@ -58,7 +58,7 @@ browser = webdriver_login_acsmine(driver=browser, user=USER, password=PASS, url=
 browser.implicitly_wait(5)
     
 # special URL for acs-knowledgebase articles
-BASE_URL='https://gate.tok.access-company.com/redmine/projects/acs-knowledgebase/knowledgebase/articles/'
+BASE_URL=URL
 
 # load articles and write down them to a csv file
 with open('./knowledge_db.csv', 'w', encoding='utf-8') as f:
